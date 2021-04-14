@@ -37,3 +37,9 @@ This menu is where you can choose your starting point and end point. The x-coord
 <p align="center">
   <img width="402" height="416" src="figures/board.png">
 </p>
+
+After hitting done, you will get a pop up explaining how to interact with the board. After hitting "Okay" on this popup and clicking on the board. You can then click on the squares to change them from black to white. If the square is white, that means the search algorithm will not be able to move to that square. You hold down your left mouse button and drag your mouse to change multiple blocks at a time. If you click on a block by accident, simply right click it to set it back to black. Hit the space bar when you're done.
+
+<p align="center">
+  <img width="332" height="159" src="figures/grid_instructions.png">
+</p>
