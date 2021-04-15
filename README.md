@@ -59,7 +59,7 @@ After a node has been fully explored, meaning we have checked all of it's neighb
 A heuristic is a function that will estimate the remaining path length. For optimality, it is important that this function is admissable. Common examples of heuristics are euclidean distance and manhattan distance.
 
 ### Admissable
-A function is admissable if it never overestimates. The importance of this will be discussed in the A* section. 
+A function is admissable if it never outputs a value that is better than the real value, meaning if the true cost from point A to point B is 10 and the function estimates the length to be 8, this function would not be admissable. In path finding, the euclidean distance is admissable because the actual length of the path will never be less than shorter than the euclidean distance, because the shortest path between two points is a straight line. The importance of this will be discussed in the A* section. 
 
 ### Complete
 A function is complete if it is gauranteed to find an answer if it exists.
@@ -77,7 +77,9 @@ Breadth first search is a very simple search algorithm where it will examine all
 
 ### Depth First Search
 
-Depth first search is similar to breadth first search but instead of looking at all the nodes on one row before moving to the next level, it will explore as deep into a node it can go first before moving onto the next node. 
+Depth first search is similar to breadth first search but instead of looking at all the nodes on one row before moving to the next level, it will explore as deep into a node it can go first before moving onto the next node. DFS is not guaranteed to be complete or optimal. If a node has an infinite depth path, a cyclic graph for example, then it will never move onto a new node which could stop it from finding an answer. It is not optimal since it searches for depth first. If the answer exists at depth 3 and 5, DFS would return the answer at depth 5 if it sees that first, based on the ordering of the nodes. The run time of DFS is O(b<sup>m</sup>) where m is the maximum depth of the tree. The space complexity of DFS is O(bm). That is the benefit of using DFS. It is the most efficient search algorithm in terms of memory required. It only stores a node in memoryu while it is being explored and once it reaches the bottom it can throw it out and backtrack.
 
 ### A*
+
+
 ### Bidirectional A*
