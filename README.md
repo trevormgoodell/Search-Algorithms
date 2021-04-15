@@ -76,5 +76,8 @@ In regards to trees, the branching factor is how many nodes are generated for ea
 Breadth first search is a very simple search algorithm where it will examine all the nodes at a single level before going any deeper. On this board, it will look at all the squares that are 1 block away from the starting position before it moves. The only ordering of nodes is the way the neighbors are generated. The time and space complexity of BFS is O(b<sup>d</sup>) for both. This is because all nodes are stored in memory, and you have to look at all neighbors of every node. BFS is guaranteed to be optimal and complete, if b is finite and there are identical step weights between nodes. 
 
 ### Depth First Search
+
+Depth first search is similar to breadth first search but instead of looking at all the nodes on one row before moving to the next level, it will explore as deep into a node it can go first before moving onto the next node. 
+
 ### A*
 ### Bidirectional A*
