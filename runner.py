@@ -89,29 +89,29 @@ def setup(screen):
         start = (int(start[0]), int(start[1]))
         end = (int(end[0]), int(end[1]))
 
-        start_x_valid = False
-        start_y_valid = False
-        end_x_valid = False
-        end_y_valid = False
+        start_row_valid = False
+        start_col_valid = False
+        end_row_valid = False
+        end_col_valid = False
 
-        if start[0] < 0 or start[0] > columns - 1:
-            messagebox.showerror("StartXError", "X Coordinate of Start must be in the range [0, " + str(columns-1) + "]")
+        if start[0] < 0 or start[0] > rows - 1:
+            messagebox.showerror("StartXError", "X Coordinate of Start must be in the range [0, " + str(rows-1) + "]")
         else:
-            start_x_valid = True
-        if start[1] < 0 or start[1] > rows - 1:
-            messagebox.showerror("StartYError", "Y Coordinate of Start must be in the range [0, " + str(rows-1) + "]")
+            start_row_valid = True
+        if start[1] < 0 or start[1] > columns - 1:
+            messagebox.showerror("StartYError", "Y Coordinate of Start must be in the range [0, " + str(columns-1) + "]")
         else:
-            start_y_valid = True
-        if end[0] < 0 or end[0] > columns - 1:
-            messagebox.showerror("EndXError", "X Coordinate of End must be in the range [0, " + str(columns-1) + "]")
+            start_col_valid = True
+        if end[0] < 0 or end[0] > rows - 1:
+            messagebox.showerror("EndXError", "X Coordinate of End must be in the range [0, " + str(rows-1) + "]")
         else:
-            end_x_valid = True
-        if end[1] < 0 or end[1] > rows - 1:
-            messagebox.showerror("EndYError", "Y Coordinate of End must be in the range [0, " + str(rows-1) + "]")
+            end_row_valid = True
+        if end[1] < 0 or end[1] > columns - 1:
+            messagebox.showerror("EndYError", "Y Coordinate of End must be in the range [0, " + str(columns-1) + "]")
         else:
-            end_y_valid = True
+            end_col_valid = True
 
-        if start_x_valid and start_y_valid and end_x_valid and end_y_valid:
+        if start_row_valid and start_col_valid and end_row_valid and end_col_valid:
 
             for row_ind in range(rows):
                 for col_ind in range(columns):
@@ -154,9 +154,9 @@ def setup(screen):
         pass
     window = Tk()
     
-    start_label = Label(window, text="Start Coordinate (x,y):")
+    start_label = Label(window, text="Start Coordinate (row,col):")
     start_box = Entry(window)
-    end_label = Label(window, text="End Coordinate (x,y):")
+    end_label = Label(window, text="End Coordinate (row,col):")
     end_box = Entry(window)
 
     done = Button(window, text="Done", command=on_click)
