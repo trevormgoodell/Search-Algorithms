@@ -2,7 +2,6 @@ import pygame
 from tkinter import *
 from tkinter import ttk
 from tkinter import messagebox
-from copy import deepcopy
 from math import trunc
 from data_structs import *
 from search_algorithms import *
@@ -77,7 +76,7 @@ def setup(screen):
         col = int(trunc(t / (screen_size[0] / columns)))
         row = int(trunc(w / (screen_size[1] / rows)))
         try:
-            if pos != start and pos != end:
+            if (row, col) != start and (row, col) != end:
                 grid[row][col].moveto = val
         except:
             pass
